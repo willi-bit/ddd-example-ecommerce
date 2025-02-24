@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.willibit.annotations.Consumer;
 
 /**
  * Web controller for Catalog use-cases.
@@ -29,6 +30,8 @@ class CatalogController {
 
     private final @NonNull FindProducts products;
     private final @NonNull FindProductsFromCategory fromCategory;
+
+    @Consumer(data = "InStock", producer = "com.ttulka.ecommerce.warehouse.Warehouse")
     private final @NonNull Warehouse warehouse;
 
     @GetMapping("/")

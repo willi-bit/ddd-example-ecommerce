@@ -1,8 +1,12 @@
 package com.ttulka.ecommerce.warehouse;
 
+
+import org.willibit.annotations.Producer;
+
 /**
  * Warehouse use-cases.
  */
+@Producer(data = "InStock")
 public interface Warehouse {
 
     /**
