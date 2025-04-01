@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.willibit.annotations.Consumer;
+import org.willibit.annotations.Producer;
 
 /**
  * Web controller for Cart use-cases.
@@ -31,6 +33,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 class CartController {
 
+    @Consumer(data = "InStock")
     private final @NonNull RetrieveCart retrieveCart;
 
     @GetMapping

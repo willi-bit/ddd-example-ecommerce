@@ -31,7 +31,7 @@ class CatalogController {
     private final @NonNull FindProducts products;
     private final @NonNull FindProductsFromCategory fromCategory;
 
-    @Consumer(data = "InStock", producer = "com.ttulka.ecommerce.warehouse.Warehouse")
+    @Consumer(data = "InStock")
     private final @NonNull Warehouse warehouse;
 
     @GetMapping("/")

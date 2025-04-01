@@ -3,6 +3,8 @@ package com.ttulka.ecommerce.billing.payment;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import lombok.ToString;
+import org.willibit.annotations.Consumer;
+import org.willibit.annotations.Producer;
 
 /**
  * Payment ID domain primitive.
@@ -11,6 +13,8 @@ import lombok.ToString;
 @ToString
 public final class PaymentId {
 
+    // @Consumer(data = "InStock")
+    @Producer(data = "InStock")
     private final @NonNull String id;
 
     public PaymentId(@NonNull Object id) {
